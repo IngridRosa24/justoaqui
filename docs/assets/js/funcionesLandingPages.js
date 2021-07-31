@@ -3,6 +3,7 @@ var NombreDeContacto= "Ingrid Hernández"
 var TelefonoDeContacto= "+56 9 6344 0332"
 var CorreoElectronico= "sur.silicon.cl@gmail.com"
 var Instagram= "@sursilicon"
+var Direccion= "San Juaquin 2008"
 
 
 
@@ -19,6 +20,9 @@ etiquetaTelefono.innerHTML= TelefonoDeContacto;
 var etiquetaCorreo = document.getElementById("correo");
 etiquetaCorreo.innerHTML= CorreoElectronico;
 
+var etiquetaDireccion = document.getElementById("direccion");
+etiquetaDireccion.innerHTML= Direccion;
+
 
 
 })
@@ -30,4 +34,9 @@ function iniciarMap(){
         zoom : 15,
         center: coord
     })
+    var marker = new google.maps.Marker({
+        position: coord,
+        map: map,
+        alpha:0.5
+    });
 }

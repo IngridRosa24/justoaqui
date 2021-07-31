@@ -26,7 +26,7 @@
 <!-- Menú de cabecera, plantilla Bootstrap -->
 <nav class="navbar navbar-expand-lg navbar-dark fondoAzulOscuro">
     <div class="container-fluid">
-      <img src="assets/Imagenes/logo letras blancas.png" alt="Logo Justo Aquí" title="Justo Aquí" width="100px">
+      <a href="index.html"><img src="assets/Imagenes/logo letras blancas.png" alt="Logo Justo Aquí" title="Justo Aquí" width="100px"></a>
       <!--El menú hamburgesa-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -66,9 +66,14 @@
 
 <!-- Menú lateral -->
 <div class="row">
-    <div class="col-3 fondoNaranja text-white" style="height: 1000px;">
+    <div class="col-3 fondoNaranja text-white" style="height: 1500px;">
       <div class="text-white mx-2 my-5"  id="siderbar-container">
-        <h4 class="mx-2 my-2">Datos de Contacto</h4>
+        <h4>Quienes Somos</h4>
+        <h4 style="font-weight: 100"> Somos una pastelería familiar que lleva a tu mesa los mejores postres con una gran presentación, un excelente sabor y con mucha frezcura. Nuestro objetivo es que siempre pienses dulce!.</h4>
+        <br>
+        <br>
+        <br>
+        <h5 class="mx-2 my-2">Datos de Contacto</h5>
         <hr style="border:none; height: 5px; color: white; background-color: white;">
         <h5 style="font-weight: 100" >Nombre de contacto</h5>
         <h5 id="nombre"></h5>
@@ -79,13 +84,13 @@
         <hr style="border:none; height: 5px; color: white; background-color: white;">
         <h5>Redes Sociales</h5>
         <!-- Instagram -->
-            <a
-            class="btn btn-link btn-floating btn-lg text-white m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-instagram"></i
-            ></a>
+        <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram"></i
+        ></a>
         <!-- Facebook -->
         <a
           class="btn btn-link btn-floating btn-lg text-white m-1"
@@ -96,21 +101,82 @@
         ></a>
         <!-- Whatsapp -->
         <a
-            class="btn btn-link btn-floating btn-lg text-white m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            id="whatspp"
-            ><i class="fab fa-whatsapp"></i>
+          class="btn btn-link btn-floating btn-lg text-white m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          id="whatspp"
+          ><i class="fab fa-whatsapp"></i>
         </a>
-      <!-- Incluir mapa para indicar la ubicación de la pyme -->
-      <div id="map"></div>
-
-      </div>
-      <div class=9">
-
+        <!-- Incluir dirección y mapa para indicar la ubicación de la pyme -->
+        <hr style="border:none; height: 5px; color: white; background-color: white;">
+        <h5 style="font-weight: 100">Ubicación</h5>
+        <h5 id="direccion"></h5>
+        <br>
+        <div id="map"></div>
       </div>
     </div>
+
+    <div class="col-9">
+      <div class="row">
+        <!-- Logo de las Pymes -->
+        <div class="col-3">
+          <img class= "imagenLogo" src="assets/Imagenes/LogoPiensadulce2017_Transparente.png" alt="Logo Piensa Dulce" title="Logo Piensa Dulce">
+        </div>
+        <!-- Nombres de las Pymes -->
+        <div class="col-6">
+          <h4 class="NombrePyme">Piensa Dulce</h4>
+          <h5 class="fondoAzulOscuro text-white">Endulzamos tus ideas</h5>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="card col-3 mx-auto">
+          <img class= "imagenLogo" src="assets/Imagenes/TortasPanqueques.jpeg" alt="TortasPanqueques" title="Tortas de Panqueques de Naranja">
+          <div class="card-body">
+            <h5 class="card-title">Torta de Panqueques de Naranja</h5>
+            <p class="card-text">Tortas de Panqueques, con rica crema de Naranja. Su decoración es referencial, puede llevar otros colores.</p>
+            <h5 class="card-title">$ 16.000</h5>
+            <a href="#" class="btn fondoAzulOscuro text-white position-absolute bottom-0 end-0">Comprar</a>
+          </div>
+        </div>
+        <div class="card col-3 mx-auto">
+          <img class= "imagenLogo" src="assets/Imagenes/Torta de Piña.jpeg" alt="TortaPiña" title="Torta de Piña">
+          <div class="card-body">
+            <h5 class="card-title">Torta de Piña</h5>
+            <p class="card-text">Rico biscocho esponjoso de vainilla, bañado con almibal de piña y relleno con crema de leche y trocitos de piña, decorada con mucha creatividad utilizando coco troceado y pintada con chocolate.</p>
+            <h5 class="card-title">$ 9.000</h5>
+            <a href="#" class="btn fondoAzulOscuro text-white position-absolute bottom-0 end-0">Comprar</a>
+          </div>
+        </div>
+        <div class="card col-3 mx-auto">
+          <img class= "imagenLogo" src="assets/Imagenes/Torta de Fondant.jpeg" alt="TortaFondant" title="Torta de Fondant">
+          <div class="card-body">
+            <h5 class="card-title">Torta de Fondant</h5>
+            <p class="card-text">Tortas decoradas para tus eventos, con fondant profesional hecho en casa. Tu decides el sabor del biscocho y del relleno.</p>
+            <h5 class="card-title">Consultar precio</h5>
+            <a href="#" class="btn fondoAzulOscuro text-white position-absolute bottom-0 end-0">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5"">
+        <div class="card col-3 mx-auto">
+          <img class= "imagenLogo" src="assets/Imagenes/SelvaNegra.jpeg" alt="TortaSelvaNegra" title="Torta Selva Negra">
+          <div class="card-body">
+            <h5 class="card-title">Torta Selva Negra</h5>
+            <p class="card-text">Torta esponjosa de chocolate, rellena con crema de leche, cereza marrasquino y crema de chocolate. Su cubierta es de crema de leche, y está coronada con trocitos de chocolate bitter.</p>
+            <h5 class="card-title">$ 14.000</h5>
+            <a href="#" class="btn fondoAzulOscuro text-white position-absolute bottom-0 end-0">Comprar</a>
+          </div>
+        </div>
+        <div class="card col-3 mx-auto">
+          <img class= "imagenLogo" src="assets/Imagenes/LogoPiensadulce2017_Transparente.png" alt="Logo Piensa Dulce" title="Logo Piensa Dulce">
+        </div>
+        <div class="card col-3 mx-auto">
+          <img class= "imagenLogo" src="assets/Imagenes/LogoPiensadulce2017_Transparente.png" alt="Logo Piensa Dulce" title="Logo Piensa Dulce">
+        </div>
+      </div>
+    </div>
+</div>
 
 <!--El footer fue creado con la base  mdbootstrap-->
 <footer class="text-center text-white" style="background-color: #2c3e50;">
@@ -160,7 +226,7 @@
 
   <!-- Copyright -->
   <div class="text-center text-white p-3" style="background-color: #2c3e50; border-top: 1px solid white;">
-    © 2020 Copyright:
+    © 2021 Copyright:
     <a href="#">JustoAquí</a>
   </div>
   <!-- Copyright -->
