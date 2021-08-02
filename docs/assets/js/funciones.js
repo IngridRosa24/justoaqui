@@ -9,9 +9,7 @@ $(document).ready(function(){
 //Programar el botón
     $("#btnGuardar").on("click", function(){
         alert("Se ha registrado correctamente!!!");
-        setTimeout(function(){
-            location.reload();
-        },1000);
+        location.href = "landing_page_pyme.html";
     });
     $("#btnIngresar").on("click", function(){
         alert("Bienvenido!!!");

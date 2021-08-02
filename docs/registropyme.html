@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustoAquí</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="assets/js/funciones.js"></script>
+    <script src="assets/js/registropyme.js"></script>
+    <script src="https://kit.fontawesome.com/af5abd9282.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    <!-- <input type="button" id="btnForm" value="Quiero Registrarme" class="btn btn-dark"> -->
+<!-- Pantalla emergente para registrarse -->
+    <div id="miModal1" data-bs-backdrop="static" class="modal fade show" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="width: 500px;" class="form-group">
+              <h4>Formulario de Registro</h4>
+              <input class="form-control" type="text" id="txtNombre" placeholder="Ingrese su nombre" maxlength="20"><br>
+              <input class="form-control" type="text" id="txtApellidos" placeholder="Ingrese sus apellidos"><br>
+              <input class="form-control" type="text" id="txtDireccion" placeholder="Ingrese su Direccion"><br>
+              <input class="form-control" type="email" id="txtCorreo" placeholder="Ingrese su e-mail">
+              <div class="my-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="SoyUsuario" value="option1" checked>
+                  <label class="form-check-label" for="inlineRadio1">Soy Usuario</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" id="SoyPyme" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">Soy Pymes</label>
+                </div>
+              </div>
+              <div class="form-check form-check-inline my-3">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1">
+                <label class="form-check-label" for="inlineCheckbox1">He leído y acepto <a href="#" class="textoAzulOscuro">Términos y Condiciones</a></label>
+              </div>
+              <div class="text-center">
+                <input class="btn fondoAzulOscuro text-white" type="button" value="Registrar" id="btnGuardar">
+                <input class="btn fondoNaranja text-white" type="reset" value="Limpiar Fomulario" id="btnLimpiar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Pantalla emergente para ingresar -->
+<div id="miModal2" data-bs-backdrop="static" class="modal fade show" role="dialog" aria-hidden="true"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div style="width: 500px;" class="form-group">
+          <h4>Acceso a Justo Aquí</h4>
+          <input class="form-control" type="text" id="txtUsuario" placeholder="Ingrese su usuario" maxlength="20"><br>
+          <input class="form-control" type="text" id="txtClave" placeholder="Ingrese sus clave"><br>
+          <input class="btn fondoAzulOscuro text-white" type="button" value="Ingresar" id="btnIngresar">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+
+<!-- Menú de cabecera, plantilla Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark fondoAzulOscuro">
+  <div class="container-fluid">
+    <img src="assets/Imagenes/logo letras blancas.png" alt="Logo Justo Aquí" title="Justo Aquí" width="100px">
+    <!--El menú hamburgesa-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Menú de cabecera-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link letrasMenu" href="#QuienesSomos">Quienes somos</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle letrasMenu" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Compra por Categoría
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Belleza</a></li>
+            <li><a class="dropdown-item" href="Vitrina.html">Gastronomía</a></li>
+            <li><a class="dropdown-item" href="#">Informática</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">otros</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link letrasMenu" href="#">Sale</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link letrasMenu" href="contactanos.html">Contáctanos</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Que estás buscando" aria-label="Search">
+        <button class="btn" style="background-color: rgb(255, 64, 0); color: white;" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Registro de ingreso usurario Pyme, sacado de bootstrap -->
+<div class="container">
+  <h2>Registra tu emprendimiento</h2>
+  <h5>Completa el formulario con los datos requeridos y se parte de JUSTO AQUI</h5><br><br>
+  <!--Informacion personal-->
+  <fieldset>
+    <h5>Información Personal</h5>
+    <div class="row">
+    <hr><br>
+    <div class="col 9">
+      <h6>Nombre Completo</h6>
+      <input type="text" class="form-control" placeholder="Escribe tu nombre" aria-label="txtNombre">
+    </div>
+    <div class="col 3">
+      <h6>RUN</h6>
+      <input type="text" class="form-control" placeholder="12345678-9" aria-label="txtRUN">
+    </div>
+  </div><br>
+  </fieldset>
+  
+  <!--Codigo para el correo-->
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div><br><br>
+  <!--Informacion del emprendimiento-->
+  <div class="row">
+    <h5>Información de tu emprendimiento</h5>
+    <hr><br>
+    <div class="col">
+      <h6>Nombre </h6>
+      <input type="text" class="form-control" placeholder="Escribe tu nombre" aria-label="txtNombre">
+    </div>
+    <div class="col">
+      <h6>RUT de la empresa (opcional)</h6>
+      <input type="text" class="form-control" placeholder="12345678-9" aria-label="txtrutempresa">
+    </div>
+  </div><br>
+  
+  <!--Correo y telefono del emprendimiento-->
+  <div class="row">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email de contacto</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col">
+      <h6>Telefono movil de contacto</h6>
+      <input type="tel" class="form-control" placeholder="123456789" aria-label="celularempresa">
+    </div>
+  </div><br>
+  
+  <!--subir logo emprendimiento-->
+  <h6>Sube tu logo aqui (opcional)</h6><br>
+  <form enctype="multipart/form-data" action="uploader.php" method="POST">
+    <input name="uploadedfile" type="file" />
+    <input type="submit" value="Subir archivo" />
+    </form><br><br>
+  
+  <!--subir redes sociales-->
+  <h6>Sube tus redes sociales</h6>
+  <div class="row g-3">
+    <div class="col-sm">
+      <input type="text" class="form-control" placeholder="Instagram" aria-label="instagram">
+    </div>
+    <div class="col-sm">
+      <input type="text" class="form-control" placeholder="Facebook" aria-label="facebook">
+    </div>
+    <div class="col-sm">
+      <input type="text" class="form-control" placeholder="URL" aria-label="URL">
+    </div>
+  </div><br><br>
+  <!--medios de venta-->
+  <h6>¿Por qué medio vendes tu producto o servicio (responde al menos una)?</h6><br>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="col 6" type="checkbox" name="ventadigital" id="ventadigital"> Internet (Digital)
+      <input class="col 6" type="checkbox" name="ventafisica" id="ventadigital"> Tienda Física (Local establecido)
+    </div>
+  </div><br>
+  <!--Direccion de la tienda fisica-->
+  <h6>Dirección de la tienda física (opcional)</h6>
+  <div class="row">
+   <input class="col 6" type="text" name="textbox"> 
+  </div><br>
+  <!--region y comuna-->
+  <select id="regiones"></select>
+  <select id="comunas"></select><br><br>
+  
+  <!--Cuentanos de tu emprendimiento-->
+  <h6>Cuéntanos de tu emprendimiento</h6><br>
+  <select name="Categorias">
+    <option>Seleccione una categoria</option>
+    <option>Alimentación</option>
+    <option>Artesania</option>
+    <option>Comercio</option>
+    <option>Hotelería</option>
+    <option>Hogar</option>
+    <option>Mundo Infantil</option>
+    <option>Belleza</option>
+    <option>Salud</option>
+    <option>Servicios</option>
+    <option>Hotelería</option>
+    <option>Vestuario y Calzado</option>
+  </select><br><br>
+  <h6>Describe tu emprendimiento: detallando lo que haces y lo que te diferencia de los demás</h6>
+  <textarea rows="" cols="70px"></textarea><br><br>
+
+  <!--Subir fotos productos o servicios-->
+  <h6>Agrega fotografias de tu producto o servicio</h6><br>
+
+  <input class="form-control" type="file" id="archivo1">
+  <input class="form-control" type="file" id="archivo2">
+  <input class="form-control" type="file" id="archivo3"><br><br>
+
+  <!--Boton registrar mi emprendimiento-->
+  <a href="landing_page_pyme.html"><input class="btn fondoAzulOscuro text-white" type="button" value="Guardar e ir a mi tienda"></a><br><br>
+</div>
+
+
+<!--El footer fue creado con la base  mdbootstrap-->
+  <footer class="text-center text-white" style="background-color: #2c3e50;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-white m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-white m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-white m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-white m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i>
+        </a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center text-white p-3" style="background-color: #2c3e50; border-top: 1px solid white;">
+      © 2020 Copyright:
+      <a href="#">JustoAquí</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+
+
+<!--Links de accesos para JavaScrip y Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
