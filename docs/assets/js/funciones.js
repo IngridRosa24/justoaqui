@@ -9,7 +9,7 @@ $(document).ready(function(){
 //Programar el botón
     $("#btnGuardar").on("click", function(){
         alert("Se ha registrado correctamente!!!");
-        location.href = "landing_page_pyme.html";
+        location.href = "registropyme.html";
     });
     $("#btnIngresar").on("click", function(){
         alert("Bienvenido!!!");
